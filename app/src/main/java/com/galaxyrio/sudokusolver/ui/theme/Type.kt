@@ -1,27 +1,33 @@
-
 package com.galaxyrio.sudokusolver.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
-// Important: Import the R class to access res/font/
-import com.galaxyrio.sudokusolver.R 
+import com.galaxyrio.sudokusolver.R
 
-// 1. Declare your custom font
-val CustomFont = FontFamily(
-    Font(R.google_sans_rounded_regular)
+// 1. Declare your custom font family
+val AppFont = FontFamily(
+    Font(R.font.google_sans_rounded_regular)
 )
 
-// 2. Fetch the default Material 3 typography
-val defaultTypography = Typography()
+// 2. Grab the default Material 3 styles to use as a baseline
+private val baseline = Typography()
 
-// 3. Override all styles to use your custom font
+// 3. Override every default text style to use your new font
 val Typography = Typography(
-    displayLarge = defaultTypography.displayLarge.copy(fontFamily = CustomFont),
-    displayMedium = defaultTypography.displayMedium.copy(fontFamily = CustomFont),
-    displaySmall = defaultTypography.displaySmall.copy(fontFamily = CustomFont),
-    headlineLarge = defaultTypography.headlineLarge.copy(fontFamily = CustomFont),
-    headlineMedium = defaultTypography.headlineMedium.copy(fontFamily = CustomFont),
-    headlineSmall = defaultTypography.headlineSmall.copy(fontFamily = CustomFont),
-    titleLarge = defaultTypography.titleLarge.copy(fontFamily = CustomFont),
-    titleMedium =
+    displayLarge = baseline.displayLarge.copy(fontFamily = AppFont),
+    displayMedium = baseline.displayMedium.copy(fontFamily = AppFont),
+    displaySmall = baseline.displaySmall.copy(fontFamily = AppFont),
+    headlineLarge = baseline.headlineLarge.copy(fontFamily = AppFont),
+    headlineMedium = baseline.headlineMedium.copy(fontFamily = AppFont),
+    headlineSmall = baseline.headlineSmall.copy(fontFamily = AppFont),
+    titleLarge = baseline.titleLarge.copy(fontFamily = AppFont),
+    titleMedium = baseline.titleMedium.copy(fontFamily = AppFont),
+    titleSmall = baseline.titleSmall.copy(fontFamily = AppFont),
+    bodyLarge = baseline.bodyLarge.copy(fontFamily = AppFont),
+    bodyMedium = baseline.bodyMedium.copy(fontFamily = AppFont),
+    bodySmall = baseline.bodySmall.copy(fontFamily = AppFont),
+    labelLarge = baseline.labelLarge.copy(fontFamily = AppFont),
+    labelMedium = baseline.labelMedium.copy(fontFamily = AppFont),
+    labelSmall = baseline.labelSmall.copy(fontFamily = AppFont)
+)
